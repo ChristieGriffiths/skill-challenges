@@ -4,24 +4,25 @@ Copy this into a `recipe.md` in your project and fill it out.
 
 ## 1. Describe the Problem
 
-As a user I can read 200 words a minute.
-I want to see an estimate of reading time for a text of any length.
+As a user 
+So that I can improve my grammar 
+I want to verify that a text starts with a capital letter and ends with a suitable sentence-end puncutation mark. 
 
 ## 2. Design the Method Signature
 
 _Include the name of the method, its parameters, return value, and side effects._
 
-name of method = reading_speed(text)
-return value = integer
+name of method = punctuation_checker(text)
+return value = true or false
 
 ```ruby
 # EXAMPLE
 
 # `reading speed = returns reading speed` extracts uppercase words from a string
-reading_time = reading_speed(text)
+valid_text = punctuation_checker(text)
 
-text: a string of any length (e.g. "blahaha haha hahahahhah ahaha hahah hahahahahha")
-reading_time: length of time as an integer (e.g. 3.21)
+text: Text a string that may not start with a capital and end with punctuation (e.g. "Blahaha haha hahahahhah ahaha hahah hahahahahha.")
+result: true or false
 
 # The method doesn't print anything or have any other side-effects
 ```
@@ -34,12 +35,14 @@ _Make a list of examples of what the method will take and return._
 ```ruby
 # EXAMPLE
 
-reading_speed("hello WORLD") => 0.6
-reading_speed("where am i") => 0.9
-reading_speed("in the deep ocean") => 1.2
-reading_speed("drinking a cold can diet) => 1.5
-reading_speed("") => 0
-reading_speed(nil) throws an error
+punctuation_checker("hello WORLD") => false
+punctuation_checker("Where am i.") => true
+Punctuation_checker("in the deep ocean.") => false
+Punctuation_checker("Drinking a cold can diet) => false
+Punctuation_checker("") => false
+Punctuation_checker("Chickens!") => true
+Punctuation_checker("Chickens?") => true 
+
 
 ```
 
