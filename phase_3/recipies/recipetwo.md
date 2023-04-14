@@ -33,8 +33,6 @@ result: true or false
 _Make a list of examples of what the method will take and return._
 
 ```ruby
-# EXAMPLE
-
 punctuation_checker("hello WORLD") => false
 punctuation_checker("Where am i.") => true
 Punctuation_checker("in the deep ocean.") => false
@@ -42,8 +40,6 @@ Punctuation_checker("Drinking a cold can diet) => false
 Punctuation_checker("") => false
 Punctuation_checker("Chickens!") => true
 Punctuation_checker("Chickens?") => true 
-
-
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
