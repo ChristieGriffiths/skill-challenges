@@ -9,8 +9,7 @@ end
 def decode(ciphertext, key)
   cipher = key.chars.uniq + (('a'..'z').to_a - key.chars)
   plaintext_chars = ciphertext.chars.map do |char|
-    p "the first letter should be t but is #{cipher[65 - "E".ord]}"
-  cipher[65 - char.ord]
+  cipher[(65 - char.ord) * -1]
   end
   return plaintext_chars.join
 end
@@ -22,8 +21,8 @@ end
 #
 # > decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
 # => "theswiftfoxjumpedoverthelazydog"
-
-p decode("EMB", "secretkey")
+p encode("theswiftfoxjumpedoverthelazydog", "secretkey")
+p decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
 # will return the
 
 
