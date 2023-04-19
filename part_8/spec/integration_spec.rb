@@ -17,9 +17,8 @@ describe Diary do
     it "from entire diary" do
       diary = Diary.new
       monday = DiaryEntry.new("Monday", "I flew to Brazil.")
-      
       diary.add(monday)
-      count = diary.count_word
+      result = monday.count_words
       expect(result).to eq 5
     end
   end 

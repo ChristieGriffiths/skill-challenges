@@ -11,9 +11,9 @@ class Diary
     @diary 
   end
 
-  def count_word
+  def count_words
     counter = 0
-    counter += entry.count_words
+    counter += entry.count_word
   end
 
   def reading_time(wpm) # wpm is an integer representing
