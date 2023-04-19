@@ -3,7 +3,8 @@ class Diary
     @diary = Array.new
   end
 
-  def add(entry) 
+  def add(entry)
+    @entry = entry 
     @diary << entry 
   end
 
@@ -11,9 +12,9 @@ class Diary
     @diary 
   end
 
-  def count_words
+  def count_word
     counter = 0
-    counter += entry.count_word
+    counter += @entry.count_words
   end
 
   def reading_time(wpm) # wpm is an integer representing

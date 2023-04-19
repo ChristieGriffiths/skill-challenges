@@ -7,4 +7,5 @@ describe Diary do
       expect(diary.all).to eq []
     end
   end
+
 end
